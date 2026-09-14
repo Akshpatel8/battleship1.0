@@ -13,6 +13,8 @@ class BattleShip
 
       int row, col, direction;
       
+      System.out.println("Hello");
+
       int[][] HPBoard = new int[size][size];
       System.out.println("Where do you want to put your 2-long boat? ");
       System.out.print("Coordinates of the upper-left corner: ");
