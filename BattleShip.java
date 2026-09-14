@@ -2,18 +2,28 @@ import java.util.*;
 
 class BattleShip
 {
+   static Scanner scan = new Scanner(System.in);
+   static Random rand = new Random();
+   static int[][] HPBoard;
+   static char[][] displayBoardForHP;  
+   static int[][] CPBoard;
+   static int[] allPos;
+   static int nbCPspotsToFind;
+   static int nbHPspotsToFind;
+   static int count;
+
    public static void main(String[] args)
    {
-      Scanner scan = new Scanner(System.in);
-      Random rand = new Random();
-      
+      intGame();
+      playGame();
+   }
+
+   public static void intGame(){
       //**************** game setup
       System.out.print("Size of board? (e.g., 4 for a 4x4 board) ");
       int size = scan.nextInt();
 
       int row, col, direction;
-      
-      System.out.println("Hello");
 
       int[][] HPBoard = new int[size][size];
       System.out.println("Where do you want to put your 2-long boat? ");
@@ -64,7 +74,9 @@ class BattleShip
       int nbCPspotsToFind = 2;
       int nbHPspotsToFind = 2;
       int count = 0;
-     
+   }  
+   public static void playGame(){
+      int row, col;
       //**************** playing game
       
       while(nbCPspotsToFind > 0 && nbHPspotsToFind > 0)
@@ -111,5 +123,5 @@ class BattleShip
          
       }
       System.out.println("Game over");
-   }
-}
+   }}
+
